@@ -16,10 +16,11 @@ and to instill them the love for cooking.
 - Vishweshwaran Ravi (1170091)
 
 ## Features
+
 - Users can search for various recipes using keywords(ingredient name)
 - Users can save the recipes they like to a separate "Saved" screen
 - Users can create a recipe of their own 
-- Users can ask for some suggestions in a separate chat screen from AI (ChatGPT)
+- Users can ask for some suggestions in a separate chat screen from AI
 - Users can "run" the cooking process by selecting the recipe 
 - Users can set the timer for various stages of cooking process while "running" the recipe
 and can receive the notification from the app when the timer is up
