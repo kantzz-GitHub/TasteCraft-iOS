@@ -1,7 +1,5 @@
 # Dont-Starve
 
-Source code for an iOS app to help find easy budget friendly recipes
-...
 "Don't Starve!" is an iOS application that helps people with little to 
 no experience in cooking to search, follow recipes in a 
 straightforward "idiot-proof" manner.
