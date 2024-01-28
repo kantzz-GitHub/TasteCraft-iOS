@@ -1,11 +1,11 @@
-# Dont-Starve
+# TasteCraft-iOS
 
-"Don't Starve!" is an iOS application that helps people with little to 
+"TasteCraft" is an iOS application that helps people with little to 
 no experience in cooking to search, follow recipes in a 
 straightforward "idiot-proof" manner.
 Users can rely on a wide selection of recipes, save their favourite ones 
 or create one of their own.
-"Don't Starve!"'s mission is to help people gain independence 
+"TasteCraft"'s mission is to help people gain independence 
 and to instill them the love for cooking. 
 
 > Capstone Project by **Group 2**
