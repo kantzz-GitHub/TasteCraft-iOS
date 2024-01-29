@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		143089492B60A0350034CD0F /* Don't Starve!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Don't Starve!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		143089492B60A0350034CD0F /* Taste Craft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Taste Craft.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1430894C2B60A0350034CD0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1430894E2B60A0350034CD0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		143089502B60A0350034CD0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 			isa = PBXGroup;
 			children = (
 				88727CE12B60AC7600F2DFCA /* README.md */,
-				1430894B2B60A0350034CD0F /* Don't Starve! */,
+				1430894B2B60A0350034CD0F /* Taste Craft */,
 				1430894A2B60A0350034CD0F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +50,12 @@
 		1430894A2B60A0350034CD0F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				143089492B60A0350034CD0F /* Don't Starve!.app */,
+				143089492B60A0350034CD0F /* Taste Craft.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1430894B2B60A0350034CD0F /* Don't Starve! */ = {
+		1430894B2B60A0350034CD0F /* Taste Craft */ = {
 			isa = PBXGroup;
 			children = (
 				1430894C2B60A0350034CD0F /* AppDelegate.swift */,
@@ -66,15 +66,15 @@
 				143089572B60A0360034CD0F /* LaunchScreen.storyboard */,
 				1430895A2B60A0360034CD0F /* Info.plist */,
 			);
-			path = "Don't Starve!";
+			path = "Taste Craft";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		143089482B60A0350034CD0F /* Don't Starve! */ = {
+		143089482B60A0350034CD0F /* Taste Craft */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1430895D2B60A0360034CD0F /* Build configuration list for PBXNativeTarget "Don't Starve!" */;
+			buildConfigurationList = 1430895D2B60A0360034CD0F /* Build configuration list for PBXNativeTarget "Taste Craft" */;
 			buildPhases = (
 				143089452B60A0350034CD0F /* Sources */,
 				143089462B60A0350034CD0F /* Frameworks */,
@@ -84,9 +84,9 @@
 			);
 			dependencies = (
 			);
-			name = "Don't Starve!";
+			name = "Taste Craft";
 			productName = "Don't Starve!";
-			productReference = 143089492B60A0350034CD0F /* Don't Starve!.app */;
+			productReference = 143089492B60A0350034CD0F /* Taste Craft.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +104,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 143089442B60A0350034CD0F /* Build configuration list for PBXProject "Don't Starve!" */;
+			buildConfigurationList = 143089442B60A0350034CD0F /* Build configuration list for PBXProject "Taste Craft" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				143089482B60A0350034CD0F /* Don't Starve! */,
+				143089482B60A0350034CD0F /* Taste Craft */,
 			);
 		};
 /* End PBXProject section */
@@ -296,7 +296,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5Q2G7C7C3U;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Don't Starve!/Info.plist";
+				INFOPLIST_FILE = "Taste Craft/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -307,7 +307,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.group2.dont-starve";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.group2.taste-craft";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -324,7 +324,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5Q2G7C7C3U;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Don't Starve!/Info.plist";
+				INFOPLIST_FILE = "Taste Craft/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -335,7 +335,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.group2.dont-starve";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.group2.taste-craft";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -346,7 +346,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		143089442B60A0350034CD0F /* Build configuration list for PBXProject "Don't Starve!" */ = {
+		143089442B60A0350034CD0F /* Build configuration list for PBXProject "Taste Craft" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1430895B2B60A0360034CD0F /* Debug */,
@@ -355,7 +355,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1430895D2B60A0360034CD0F /* Build configuration list for PBXNativeTarget "Don't Starve!" */ = {
+		1430895D2B60A0360034CD0F /* Build configuration list for PBXNativeTarget "Taste Craft" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1430895E2B60A0360034CD0F /* Debug */,

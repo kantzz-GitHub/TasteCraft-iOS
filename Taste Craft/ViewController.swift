@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Don't Starve!
+//  Taste Craft
 //
 //  Created by Shermukhammad Usmonov on 2024-01-23.
 //
