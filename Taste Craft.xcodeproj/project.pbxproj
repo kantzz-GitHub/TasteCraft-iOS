@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		1430894D2B60A0350034CD0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430894C2B60A0350034CD0F /* AppDelegate.swift */; };
 		1430894F2B60A0350034CD0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430894E2B60A0350034CD0F /* SceneDelegate.swift */; };
-		143089512B60A0350034CD0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143089502B60A0350034CD0F /* ViewController.swift */; };
+		143089512B60A0350034CD0F /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143089502B60A0350034CD0F /* StartVC.swift */; };
 		143089542B60A0350034CD0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143089522B60A0350034CD0F /* Main.storyboard */; };
 		143089562B60A0360034CD0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143089552B60A0360034CD0F /* Assets.xcassets */; };
 		143089592B60A0360034CD0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143089572B60A0360034CD0F /* LaunchScreen.storyboard */; };
+		145117B82B7A9D1A0095090E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145117B72B7A9D1A0095090E /* LoginVC.swift */; };
+		145117BA2B7A9DB10095090E /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145117B92B7A9DB10095090E /* CreateAccountVC.swift */; };
 		881E80B32B793C6C008F65D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 881E80B22B793C6C008F65D5 /* GoogleService-Info.plist */; };
 		881E80C22B793D0F008F65D5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 881E80C12B793D0F008F65D5 /* FirebaseAuth */; };
 		881E80C42B793D0F008F65D5 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 881E80C32B793D0F008F65D5 /* FirebaseAuthCombine-Community */; };
@@ -36,11 +38,13 @@
 		143089492B60A0350034CD0F /* Taste Craft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Taste Craft.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1430894C2B60A0350034CD0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1430894E2B60A0350034CD0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		143089502B60A0350034CD0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		143089502B60A0350034CD0F /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		143089532B60A0350034CD0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		143089552B60A0360034CD0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		143089582B60A0360034CD0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1430895A2B60A0360034CD0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		145117B72B7A9D1A0095090E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		145117B92B7A9DB10095090E /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		881E80B22B793C6C008F65D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8847B5252B79965400B28D79 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8847B5282B79968D00B28D79 /* NetworkRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
@@ -121,6 +125,9 @@
 			children = (
 				143089502B60A0350034CD0F /* ViewController.swift */,
 				88F6306F2B7AA04E009A1F23 /* HomeView.swift */,
+				143089502B60A0350034CD0F /* StartVC.swift */,
+				145117B92B7A9DB10095090E /* CreateAccountVC.swift */,
+				145117B72B7A9D1A0095090E /* LoginVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,11 +262,14 @@
 			files = (
 				143089512B60A0350034CD0F /* ViewController.swift in Sources */,
 				88F630742B7AA0DF009A1F23 /* CategoriesFetcher.swift in Sources */,
+				143089512B60A0350034CD0F /* StartVC.swift in Sources */,
 				1430894D2B60A0350034CD0F /* AppDelegate.swift in Sources */,
 				88F630722B7AA079009A1F23 /* HomeViewModel.swift in Sources */,
+				145117B82B7A9D1A0095090E /* LoginVC.swift in Sources */,
 				8847B5262B79965400B28D79 /* API.swift in Sources */,
 				88F630772B7AA266009A1F23 /* Category.swift in Sources */,
 				88F630702B7AA04E009A1F23 /* HomeView.swift in Sources */,
+				145117BA2B7A9DB10095090E /* CreateAccountVC.swift in Sources */,
 				8847B5292B79968D00B28D79 /* NetworkRequestable.swift in Sources */,
 				1430894F2B60A0350034CD0F /* SceneDelegate.swift in Sources */,
 			);
