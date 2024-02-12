@@ -54,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="56" y="4"/>
         </scene>
         <!--Create AccountVC-->
         <scene sceneID="cvH-M7-jxe">
@@ -69,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yaM-cw-WCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039" y="434"/>
+            <point key="canvasLocation" x="1039" y="342"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="rRK-jw-d8A">
@@ -98,7 +98,7 @@
                                     <constraint firstAttribute="width" constant="250" id="a9V-9O-81g"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 <connections>
                                     <action selector="onPasswordTextFieldChanged:" destination="9MH-m6-za3" eventType="editingDidEnd" id="XTD-HT-bjd"/>
                                 </connections>
@@ -157,11 +157,53 @@
                         <outlet property="invalidPasswordLabel" destination="rMK-Yg-TCf" id="VXC-Pc-1kp"/>
                         <outlet property="loginBtn" destination="DF4-Q6-thG" id="hrZ-n4-mZc"/>
                         <outlet property="passwordTextField" destination="UAi-S9-xbe" id="4Xx-Ak-6bt"/>
+                        <segue destination="ATe-gc-vD0" kind="show" identifier="goToHomeScreenVC" id="JeD-59-FE0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6P7-02-Tbb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1038.9312977099237" y="-227.46478873239437"/>
+            <point key="canvasLocation" x="1039" y="-319"/>
+        </scene>
+        <!--Home ScreenVC-->
+        <scene sceneID="BuA-qP-x7c">
+            <objects>
+                <viewController id="ATe-gc-vD0" customClass="HomeScreenVC" customModule="Taste_Craft" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9p6-ah-Lh3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7d-xz-xPm">
+                                <rect key="frame" x="175.66666666666666" y="410.66666666666669" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwN-md-gad">
+                                <rect key="frame" x="151.66666666666666" y="481.66666666666669" width="90" height="35.000000000000057"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign Out"/>
+                                <connections>
+                                    <action selector="onSignOutButtonTapped:" destination="ATe-gc-vD0" eventType="touchUpInside" id="YUT-in-nBl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M7A-Co-8ZU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IwN-md-gad" firstAttribute="centerX" secondItem="9p6-ah-Lh3" secondAttribute="centerX" id="BbV-7c-nNZ"/>
+                            <constraint firstItem="w7d-xz-xPm" firstAttribute="centerX" secondItem="9p6-ah-Lh3" secondAttribute="centerX" id="CLc-hl-49M"/>
+                            <constraint firstItem="w7d-xz-xPm" firstAttribute="centerY" secondItem="9p6-ah-Lh3" secondAttribute="centerY" id="MWE-RM-Bq3"/>
+                            <constraint firstItem="IwN-md-gad" firstAttribute="top" secondItem="w7d-xz-xPm" secondAttribute="bottom" constant="50" id="QCo-6f-Hey"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KAe-f6-fNh"/>
+                    <connections>
+                        <outlet property="userEmailLabel" destination="w7d-xz-xPm" id="kk6-uP-cng"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Cj-yB-ZL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2054" y="4"/>
         </scene>
     </scenes>
     <resources>
