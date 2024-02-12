@@ -24,6 +24,8 @@
 		881E80DC2B793D0F008F65D5 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 881E80DB2B793D0F008F65D5 /* FirebaseInstallations */; };
 		881E80E82B793D0F008F65D5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 881E80E72B793D0F008F65D5 /* FirebaseStorage */; };
 		881E80EA2B793D0F008F65D5 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 881E80E92B793D0F008F65D5 /* FirebaseStorageCombine-Community */; };
+		8847B5262B79965400B28D79 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847B5252B79965400B28D79 /* API.swift */; };
+		8847B5292B79968D00B28D79 /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847B5282B79968D00B28D79 /* NetworkRequestable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		143089582B60A0360034CD0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1430895A2B60A0360034CD0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		881E80B22B793C6C008F65D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8847B5252B79965400B28D79 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		8847B5282B79968D00B28D79 /* NetworkRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
 		88727CE12B60AC7600F2DFCA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,9 +84,11 @@
 		1430894B2B60A0350034CD0F /* Taste Craft */ = {
 			isa = PBXGroup;
 			children = (
-				1430894C2B60A0350034CD0F /* AppDelegate.swift */,
-				1430894E2B60A0350034CD0F /* SceneDelegate.swift */,
-				143089502B60A0350034CD0F /* ViewController.swift */,
+				8847B5222B79962300B28D79 /* App */,
+				8847B52B2B7997E700B28D79 /* Model */,
+				8847B5232B79963500B28D79 /* View */,
+				8847B52A2B7997DF00B28D79 /* ViewModel */,
+				8847B5272B79968000B28D79 /* Services */,
 				143089522B60A0350034CD0F /* Main.storyboard */,
 				143089552B60A0360034CD0F /* Assets.xcassets */,
 				143089572B60A0360034CD0F /* LaunchScreen.storyboard */,
@@ -90,6 +96,54 @@
 				1430895A2B60A0360034CD0F /* Info.plist */,
 			);
 			path = "Taste Craft";
+			sourceTree = "<group>";
+		};
+		8847B5222B79962300B28D79 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8847B5242B79964500B28D79 /* Enums */,
+				1430894C2B60A0350034CD0F /* AppDelegate.swift */,
+				1430894E2B60A0350034CD0F /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8847B5232B79963500B28D79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				143089502B60A0350034CD0F /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8847B5242B79964500B28D79 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				8847B5252B79965400B28D79 /* API.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		8847B5272B79968000B28D79 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8847B5282B79968D00B28D79 /* NetworkRequestable.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8847B52A2B7997DF00B28D79 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8847B52B2B7997E700B28D79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +235,8 @@
 			files = (
 				143089512B60A0350034CD0F /* ViewController.swift in Sources */,
 				1430894D2B60A0350034CD0F /* AppDelegate.swift in Sources */,
+				8847B5262B79965400B28D79 /* API.swift in Sources */,
+				8847B5292B79968D00B28D79 /* NetworkRequestable.swift in Sources */,
 				1430894F2B60A0350034CD0F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
