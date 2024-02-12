@@ -26,6 +26,10 @@
 		881E80EA2B793D0F008F65D5 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 881E80E92B793D0F008F65D5 /* FirebaseStorageCombine-Community */; };
 		8847B5262B79965400B28D79 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847B5252B79965400B28D79 /* API.swift */; };
 		8847B5292B79968D00B28D79 /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847B5282B79968D00B28D79 /* NetworkRequestable.swift */; };
+		88F630702B7AA04E009A1F23 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6306F2B7AA04E009A1F23 /* HomeView.swift */; };
+		88F630722B7AA079009A1F23 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F630712B7AA079009A1F23 /* HomeViewModel.swift */; };
+		88F630742B7AA0DF009A1F23 /* CategoriesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F630732B7AA0DF009A1F23 /* CategoriesFetcher.swift */; };
+		88F630772B7AA266009A1F23 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F630762B7AA266009A1F23 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		8847B5252B79965400B28D79 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8847B5282B79968D00B28D79 /* NetworkRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
 		88727CE12B60AC7600F2DFCA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		88F6306F2B7AA04E009A1F23 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		88F630712B7AA079009A1F23 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		88F630732B7AA0DF009A1F23 /* CategoriesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesFetcher.swift; sourceTree = "<group>"; };
+		88F630762B7AA266009A1F23 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				143089502B60A0350034CD0F /* ViewController.swift */,
+				88F6306F2B7AA04E009A1F23 /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,6 +136,7 @@
 		8847B5272B79968000B28D79 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				88F630752B7AA0FD009A1F23 /* API */,
 				8847B5282B79968D00B28D79 /* NetworkRequestable.swift */,
 			);
 			path = Services;
@@ -135,6 +145,7 @@
 		8847B52A2B7997DF00B28D79 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				88F630712B7AA079009A1F23 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -142,8 +153,17 @@
 		8847B52B2B7997E700B28D79 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				88F630762B7AA266009A1F23 /* Category.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		88F630752B7AA0FD009A1F23 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				88F630732B7AA0DF009A1F23 /* CategoriesFetcher.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +254,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				143089512B60A0350034CD0F /* ViewController.swift in Sources */,
+				88F630742B7AA0DF009A1F23 /* CategoriesFetcher.swift in Sources */,
 				1430894D2B60A0350034CD0F /* AppDelegate.swift in Sources */,
+				88F630722B7AA079009A1F23 /* HomeViewModel.swift in Sources */,
 				8847B5262B79965400B28D79 /* API.swift in Sources */,
+				88F630772B7AA266009A1F23 /* Category.swift in Sources */,
+				88F630702B7AA04E009A1F23 /* HomeView.swift in Sources */,
 				8847B5292B79968D00B28D79 /* NetworkRequestable.swift in Sources */,
 				1430894F2B60A0350034CD0F /* SceneDelegate.swift in Sources */,
 			);
