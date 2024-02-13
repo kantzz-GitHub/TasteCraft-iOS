@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct HomeView: View {
     
@@ -22,7 +23,29 @@ struct HomeView: View {
                         }
                     }.listRowSeparator(.hidden)
                 }.listStyle(.plain)
-            }.navigationTitle("Categories")
+            }
+            .navigationTitle("Categories")
+            .toolbar {
+                ToolbarItem {
+                    Button("Logout") {
+                        do {
+                            let firebaseAuth = Auth.auth()
+                            try firebaseAuth.signOut()
+                            UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
+                            UserDefaults.standard.synchronize()
+                            
+                            
+                            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                            let navController = mainStoryboard.instantiateViewController(withIdentifier: "NavController") as! UINavigationController
+                            UIApplication.shared.windows.first?.rootViewController = navController
+                            UIApplication.shared.windows.first?.makeKeyAndVisible()
+
+                        } catch {
+                            print("Failed with error: \(error.localizedDescription)")
+                        }
+                    }
+                }
+            }
         }.onAppear {
             Task {
                 await viewModel.getListOfAvailableCategories()

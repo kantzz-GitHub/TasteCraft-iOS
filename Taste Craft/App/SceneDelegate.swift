@@ -23,13 +23,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let userLoginStatus = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
             
         //Checking this UserDefaults Boolean value and opening HomeView if the account is logged in
-        if(userLoginStatus)
-        {
+        if(userLoginStatus) {
             window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-                window?.windowScene = windowScene
-                window?.makeKeyAndVisible()
-                let vc = UIHostingController(rootView: HomeView())
-                window?.rootViewController = vc
+            window?.windowScene = windowScene
+            window?.makeKeyAndVisible()
+            let vc = UIHostingController(rootView: HomeView())
+            window?.rootViewController = vc
         }
         
 //        let homeView = HomeView()
