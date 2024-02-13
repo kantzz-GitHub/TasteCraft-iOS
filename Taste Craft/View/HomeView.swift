@@ -12,8 +12,21 @@ struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
     
     var body: some View {
-        ZStack {
-            Text("Hello, World!")
+        NavigationView {
+            VStack {
+                List {
+                    ForEach(viewModel.categories) { category in
+                        NavigationLink(destination: MealsView(category: category.name)) {
+                            CategoryView(name: category.name, imageURL: category.thumbnail)
+                                .padding(6)
+                        }
+                    }.listRowSeparator(.hidden)
+                }.listStyle(.plain)
+            }.navigationTitle("Categories")
+        }.onAppear {
+            Task {
+                await viewModel.getListOfAvailableCategories()
+            }
         }
     }
     

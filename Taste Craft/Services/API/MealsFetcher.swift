@@ -1,5 +1,5 @@
 //
-//  CategoriesFetcher.swift
+//  MealsFetcher.swift
 //  Taste Craft
 //
 //  Created by Vishweshwaran on 2024-02-12.
@@ -7,26 +7,16 @@
 
 import Foundation
 
-protocol CategoriesFetching {
-    func loadFoodCategories() async throws -> Categories
+protocol MealsFetching {
+    func loadMeals(for category: String) async throws -> Meals
 }
 
-struct CategoriesFetcher: CategoriesFetching {
+struct MealsFetcher: MealsFetching {
     
     private var session: URLSession
     
     init(session: URLSession = .shared) {
         self.session = session
-    }
-    
-    func loadFoodCategories() async throws -> Categories {
-        let request = try MealDB.categories.createRequest()
-        
-        let (data, response) = try await session.data(for: request)
-        
-        try validateHTTPResponse(urlResponse: response)
-        
-        return try JSONDecoder().decode(Categories.self, from: data)
     }
     
     func loadMeals(for category: String) async throws -> Meals {
@@ -47,4 +37,3 @@ struct CategoriesFetcher: CategoriesFetching {
         }
     }
 }
-
