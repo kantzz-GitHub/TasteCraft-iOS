@@ -10,6 +10,7 @@ import Foundation
 enum MealDB {
     case categories
     case filteredCategory(category: String)
+    case detailRecipe(mealID: String)
 }
 
 extension MealDB: NetworkRequestable {
@@ -24,12 +25,14 @@ extension MealDB: NetworkRequestable {
             return "/api/json/v1/1/categories.php"
         case .filteredCategory:
             return "/api/json/v1/1/filter.php"
+        case .detailRecipe:
+            return "/api/json/v1/1/lookup.php"
         }
     }
     
     var httpMethod: HTTPMethod {
         switch self {
-        case .categories, .filteredCategory:
+        case .categories, .filteredCategory, .detailRecipe:
             return .get
         }
     }
@@ -40,6 +43,8 @@ extension MealDB: NetworkRequestable {
             return nil
         case .filteredCategory(let category):
             return ["c": category]
+        case .detailRecipe(let mealID):
+            return ["i": mealID]
         }
     }
 }

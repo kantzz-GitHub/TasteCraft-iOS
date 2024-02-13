@@ -22,7 +22,9 @@ struct MealsView: View {
             VStack {
                 List {
                     ForEach(viewModel.meals) { meal in
-                        MealCardView(name: meal.name, imageURL: meal.thumbnail)
+                        NavigationLink(destination: RecipeView(mealID: meal.id)) {
+                            MealCardView(name: meal.name, imageURL: meal.thumbnail)
+                        }
                     }.listRowSeparator(.hidden)
                 }.listStyle(.plain)
             }
