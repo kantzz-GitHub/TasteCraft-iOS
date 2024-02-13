@@ -106,6 +106,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             strongSelf.passwordTextField.text = ""
             strongSelf.navigateToHomeScreen()
             
+            UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
+            UserDefaults.standard.synchronize()
+            
             
         }
     }

@@ -18,6 +18,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        //Using UserDefaults to store a boolean of whether the account is logged in or not.
+        let userLoginStatus = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
+            
+        //Checking this UserDefaults Boolean value and opening HomeView if the account is logged in
+        if(userLoginStatus)
+        {
+            window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+                window?.windowScene = windowScene
+                window?.makeKeyAndVisible()
+                let vc = UIHostingController(rootView: HomeView())
+                window?.rootViewController = vc
+        }
+        
 //        let homeView = HomeView()
 //        
 //        let window = UIWindow(windowScene: windowScene)
