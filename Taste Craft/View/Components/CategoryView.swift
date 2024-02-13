@@ -15,8 +15,14 @@ struct CategoryView: View {
     
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: imageURL)!)
-                .padding()
+            AsyncImage(url: URL(string: imageURL)!) { image in
+                image
+                    .resizable()
+                    .frame(maxHeight: 300)
+            } placeholder: {
+                ProgressView()
+                    .padding()
+            }
             ZStack {
                 Color.black.opacity(0.5)
                 Text(name)

@@ -18,18 +18,11 @@ struct RecipeView: View {
             if let recipe = viewModel.selectedRecipe {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
-                        // Display recipe details here
                         Text("Meal: \(recipe.strMeal ?? "")")
                             .font(.title)
                         Text("Category: \(recipe.strCategory ?? "")")
                             .font(.headline)
-                        if let instructions = recipe.strInstructions {
-                            Text("Instructions:")
-                                .font(.headline)
-                                .padding(.bottom, 4)
-                            Text(instructions)
-                                .font(.body)
-                        }
+                        
                         if let ingredients = recipe.ingredientsAndMeasurements {
                             Text("Ingredients:")
                                 .font(.headline)
@@ -40,14 +33,20 @@ struct RecipeView: View {
                             }
                         }
                         
+                        if let instructions = recipe.strInstructions {
+                            Text("Instructions:")
+                                .font(.headline)
+                                .padding(.bottom, 4)
+                            Text(instructions)
+                                .font(.body)
+                        }
                     }
                     .padding()
                 }
             } else {
-                ProgressView() // Show loading indicator while data is being fetched
+                ProgressView()
             }
-        }
-        .onAppear {
+        }.onAppear {
             Task {
                 await viewModel.getRecipeInstructions(for: mealID)
             }
