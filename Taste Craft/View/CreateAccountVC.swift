@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 import FirebaseAuth
 
 class CreateAccountVC: UIViewController {
@@ -28,7 +29,7 @@ class CreateAccountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         invalidUsernameLabel.text = ""
         invalidEmailLabel.text = ""
         invalidPasswordLabel.text = ""
@@ -102,12 +103,12 @@ class CreateAccountVC: UIViewController {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
-      }
+    }
     
     func passwordCheck(_ password: String) -> Bool {
         let minPasswordLength = 6
         return password.count >= minPasswordLength
-      }
+    }
     
     func createAccountButtonState(){
         createAccountButton.isEnabled = isUsernameValid && isEmailValid && isPasswordValid
@@ -116,37 +117,35 @@ class CreateAccountVC: UIViewController {
     func authCheck(email: String, password: String){
         
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-          if let error = error as? NSError {
-//            switch AuthErrorCode(rawValue: error.code) {
-//            case .operationNotAllowed:
-//              // Error: The given sign-in provider is disabled for this Firebase project. Enable it in the Firebase console, under the sign-in method tab of the Auth section.
-//            case .emailAlreadyInUse:
-//              // Error: The email address is already in use by another account.
-//            case .invalidEmail:
-//              // Error: The email address is badly formatted.
-//            case .weakPassword:
-//              // Error: The password must be 6 characters long or more.
-//            default:
-//                print("Error: \(error.localizedDescription)")
-//            }
-              
-              print("Error: \(error.localizedDescription)")
-          } else {
-            print("User signs up successfully")
-            let newUserInfo = Auth.auth().currentUser
-            let email = newUserInfo?.email
-              
-            self.navigateToHomeScreen()
-          }
+            if let error = error as? NSError {
+                //            switch AuthErrorCode(rawValue: error.code) {
+                //            case .operationNotAllowed:
+                //              // Error: The given sign-in provider is disabled for this Firebase project. Enable it in the Firebase console, under the sign-in method tab of the Auth section.
+                //            case .emailAlreadyInUse:
+                //              // Error: The email address is already in use by another account.
+                //            case .invalidEmail:
+                //              // Error: The email address is badly formatted.
+                //            case .weakPassword:
+                //              // Error: The password must be 6 characters long or more.
+                //            default:
+                //                print("Error: \(error.localizedDescription)")
+                //            }
+                
+                print("Error: \(error.localizedDescription)")
+            } else {
+                print("User signs up successfully")
+                let newUserInfo = Auth.auth().currentUser
+                let email = newUserInfo?.email
+                
+                self.navigateToHomeScreen()
+            }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToHomeScreenVC"{
-            if let emailToDisplay = Auth.auth().currentUser?.email{
-                let destination = segue.destination as! HomeScreenVC
-                destination.userEmail = emailToDisplay
-            }
+            let homeViewController = UIHostingController(rootView: HomeView())
+            UIApplication.shared.windows.first?.rootViewController = homeViewController
         }
     }
     
@@ -154,5 +153,5 @@ class CreateAccountVC: UIViewController {
         performSegue(withIdentifier: "goToHomeScreenVC", sender: self)
     }
     
-
+    
 }
