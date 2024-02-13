@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import SwiftUI
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -29,6 +29,9 @@ class LoginVC: UIViewController {
         loginBtn.isEnabled = false
         invalidEmailLabel.text = ""
         invalidPasswordLabel.text = ""
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     @IBAction func onEmailTextFieldChanged(_ sender: UITextField) {
@@ -117,4 +120,9 @@ class LoginVC: UIViewController {
     private func navigateToHomeScreen(){
         performSegue(withIdentifier: "goToHomeScreenVC", sender: self)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.view.endEditing(true)
+            return false
+        }
 }

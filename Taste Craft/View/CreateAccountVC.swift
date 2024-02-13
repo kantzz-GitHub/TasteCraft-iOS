@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 import FirebaseAuth
 
-class CreateAccountVC: UIViewController {
+class CreateAccountVC: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var usernameTextField: UITextField!
@@ -23,18 +23,18 @@ class CreateAccountVC: UIViewController {
     
     @IBOutlet weak var createAccountButton: UIButton!
     
-    var isUsernameValid = false
-    var isEmailValid = false
-    var isPasswordValid = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         
         invalidUsernameLabel.text = ""
         invalidEmailLabel.text = ""
         invalidPasswordLabel.text = ""
         
-        createAccountButton.isEnabled = false
+        createAccountButton.isEnabled = true
     }
     
     @IBAction func onUsernameTextFieldEdited(_ sender: UITextField) {
@@ -47,27 +47,19 @@ class CreateAccountVC: UIViewController {
         if let email = emailTextField.text{
             if emailCheck(email){
                 invalidEmailLabel.text = ""
-                isEmailValid = true
-                createAccountButtonState()
             } else {
                 invalidEmailLabel.text = "Invalid Email"
-                isEmailValid = false
-                createAccountButtonState()
             }
         }
     }
     
     @IBAction func onPasswordTextFieldEdited(_ sender: UITextField) {
-        
+    
         if let password = passwordTextField.text{
             if passwordCheck(password){
                 invalidPasswordLabel.text = ""
-                isPasswordValid = true
-                createAccountButtonState()
             } else {
                 invalidPasswordLabel.text = "Invalid Password"
-                isPasswordValid = false
-                createAccountButtonState()
             }
         }
     }
@@ -86,16 +78,10 @@ class CreateAccountVC: UIViewController {
     func usernameCheck(_ username: String){
         if username.count < 3{
             invalidUsernameLabel.text = "Too few characters"
-            isUsernameValid = false
-            createAccountButtonState()
         } else if username.count > 12 {
             invalidUsernameLabel.text = "Too many characters"
-            isUsernameValid = false
-            createAccountButtonState()
         } else {
             invalidUsernameLabel.text = ""
-            isUsernameValid = true
-            createAccountButtonState()
         }
     }
     
@@ -110,9 +96,6 @@ class CreateAccountVC: UIViewController {
         return password.count >= minPasswordLength
     }
     
-    func createAccountButtonState(){
-        createAccountButton.isEnabled = isUsernameValid && isEmailValid && isPasswordValid
-    }
     
     func authCheck(email: String, password: String){
         
@@ -132,11 +115,10 @@ class CreateAccountVC: UIViewController {
                 //            }
                 
                 print("Error: \(error.localizedDescription)")
+                self.invalidPasswordLabel.text = "\(error.localizedDescription)"
             } else {
                 print("User signs up successfully")
-                let newUserInfo = Auth.auth().currentUser
-                let email = newUserInfo?.email
-                
+                self.invalidPasswordLabel.text = ""
                 self.navigateToHomeScreen()
             }
         }
@@ -152,6 +134,11 @@ class CreateAccountVC: UIViewController {
     private func navigateToHomeScreen(){
         performSegue(withIdentifier: "goToHomeScreenVC", sender: self)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.view.endEditing(true)
+            return false
+        }
     
     
 }
