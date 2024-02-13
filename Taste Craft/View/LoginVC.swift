@@ -102,6 +102,7 @@ class LoginVC: UIViewController {
             strongSelf.passwordTextField.text = ""
             strongSelf.navigateToHomeScreen()
             
+            
         }
     }
     
