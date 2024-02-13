@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import SwiftUI
 
 class LoginVC: UIViewController {
     
@@ -92,13 +93,13 @@ class LoginVC: UIViewController {
             
             if error != nil{
                 print("Wrong email or password")
-//                strongSelf.emailTextField.text = ""
+                //                strongSelf.emailTextField.text = ""
                 strongSelf.passwordTextField.text = ""
                 strongSelf.credentialsCheck(false)
                 return
             }
             
-//            strongSelf.emailTextField.text = ""
+            //            strongSelf.emailTextField.text = ""
             strongSelf.passwordTextField.text = ""
             strongSelf.navigateToHomeScreen()
             
@@ -108,27 +109,12 @@ class LoginVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToHomeScreenVC"{
-            if let emailToDisplay = Auth.auth().currentUser?.email{
-                let destination = segue.destination as! HomeScreenVC
-                destination.userEmail = emailToDisplay
-            }
+            let homeViewController = UIHostingController(rootView: HomeView())
+            UIApplication.shared.windows.first?.rootViewController = homeViewController
         }
     }
     
     private func navigateToHomeScreen(){
         performSegue(withIdentifier: "goToHomeScreenVC", sender: self)
     }
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
