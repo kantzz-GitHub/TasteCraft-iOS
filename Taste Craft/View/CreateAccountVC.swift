@@ -35,6 +35,8 @@ class CreateAccountVC: UIViewController, UITextFieldDelegate {
         invalidPasswordLabel.text = ""
         
         createAccountButton.isEnabled = true
+        
+        createAccountButton.startAnimatingPressActions()
     }
     
     @IBAction func onUsernameTextFieldEdited(_ sender: UITextField) {

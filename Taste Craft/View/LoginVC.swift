@@ -32,6 +32,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        
+        loginBtn.startAnimatingPressActions()
+//        loginBtn.layer.cornerRadius = 15
     }
     
     @IBAction func onEmailTextFieldChanged(_ sender: UITextField) {
@@ -64,13 +67,14 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         authCheck(email: email, password: password)
+        
     }
     
     // MARK: Functions to be separated start here
     
     func credentialsCheck(_ boolValue: Bool) {
         if boolValue == false{
-            invalidEmailLabel.text = "Invalid Email"
+            invalidEmailLabel.text = "Invalid Email OR"
             invalidPasswordLabel.text = "Invalid Password"
             isEmailValid = false
             isPasswordValid = false
@@ -110,6 +114,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             UserDefaults.standard.synchronize()
             
             
+            
         }
     }
     
@@ -129,3 +134,14 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             return false
         }
 }
+
+extension UITextField {
+  func setCorner(radius: CGFloat) {
+        layer.cornerRadius = radius
+        clipsToBounds = true
+    }
+    
+    
+}
+
+

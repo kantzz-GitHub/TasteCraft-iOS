@@ -17,13 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYH-2U-kMU">
-                                <rect key="frame" x="71.666666666666686" y="533" width="250" height="35"/>
+                                <rect key="frame" x="46.666666666666657" y="518" width="300" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="7u6-kQ-Cw8"/>
-                                    <constraint firstAttribute="width" constant="250" id="uwi-GC-lVT"/>
+                                    <constraint firstAttribute="width" constant="300" id="GCc-SB-I0U"/>
+                                    <constraint firstAttribute="height" constant="50" id="doY-g9-v40"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Create Account" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="Palatino-Bold" family="Palatino" pointSize="25"/>
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -37,16 +38,16 @@
                                     <constraint firstAttribute="height" constant="90" id="aJU-Ho-RUI"/>
                                     <constraint firstAttribute="width" constant="250" id="kwx-qZ-VMs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="40"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pu-2k-G9O">
-                                <rect key="frame" x="71.666666666666686" y="473" width="250" height="35"/>
+                                <rect key="frame" x="46.666666666666657" y="458" width="300" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.69080444409999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="LK7-7h-diV"/>
-                                    <constraint firstAttribute="width" constant="250" id="isv-hX-GP0"/>
+                                    <constraint firstAttribute="width" constant="300" id="22N-Nb-ZQz"/>
+                                    <constraint firstAttribute="height" constant="50" id="u83-3D-4dh"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Log In" cornerStyle="capsule">
@@ -54,6 +55,7 @@
                                         <color key="backgroundColor" red="1" green="0.69080444409999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Palatino-Bold" family="Palatino" pointSize="25"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -66,11 +68,11 @@
                         <color key="backgroundColor" red="1" green="0.69080444408632657" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9pu-2k-G9O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ib7-5b-nUW"/>
-                            <constraint firstItem="qYH-2U-kMU" firstAttribute="top" secondItem="9pu-2k-G9O" secondAttribute="bottom" constant="25" id="JXw-zQ-CGw"/>
                             <constraint firstItem="g1G-SV-IQy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tjj-xp-hMr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qYH-2U-kMU" secondAttribute="bottom" constant="250" id="Wth-jH-yLO"/>
                             <constraint firstItem="g1G-SV-IQy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="gMW-Ob-NIN"/>
                             <constraint firstItem="qYH-2U-kMU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mtd-Tv-hKU"/>
+                            <constraint firstItem="qYH-2U-kMU" firstAttribute="top" secondItem="9pu-2k-G9O" secondAttribute="bottom" constant="10" id="u9o-m3-6SG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rIe-oV-CYu"/>
@@ -92,13 +94,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ew3-SM-mlf">
-                                <rect key="frame" x="71.666666666666686" y="663" width="250" height="35"/>
+                                <rect key="frame" x="46.666666666666657" y="648" width="300" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="Eoi-Ss-sZV"/>
-                                    <constraint firstAttribute="height" constant="35" id="xNJ-1Z-wM3"/>
+                                    <constraint firstAttribute="width" constant="300" id="Hj6-Mu-Y17"/>
+                                    <constraint firstAttribute="height" constant="50" id="efw-OY-4GS"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Create Account" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="Palatino-Bold" family="Palatino" pointSize="25"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="1" green="0.69080444409999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
@@ -107,77 +110,77 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="34Y-hK-4YS">
-                                <rect key="frame" x="71.666666666666686" y="375" width="250" height="35"/>
+                                <rect key="frame" x="46.666666666666657" y="390" width="300" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="X49-k8-j0W"/>
-                                    <constraint firstAttribute="height" constant="35" id="reD-3y-kul"/>
+                                    <constraint firstAttribute="height" constant="50" id="C2c-Vq-PZa"/>
+                                    <constraint firstAttribute="width" constant="300" id="onP-9a-SNy"/>
                                 </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="onEmailTextFieldEdited:" destination="DZF-mv-fLf" eventType="editingDidEnd" id="xyd-vL-Skw"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7B-5A-3QK">
-                                <rect key="frame" x="71.666666666666686" y="416" width="250" height="20"/>
+                                <rect key="frame" x="46.666666666666657" y="446" width="300" height="20"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7mz-kT-7Mn"/>
                                     <constraint firstAttribute="height" constant="20" id="Mo2-gs-2ND"/>
-                                    <constraint firstAttribute="width" constant="250" id="dsd-cE-hhO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="16"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNQ-QP-OlM">
-                                <rect key="frame" x="71.666666666666686" y="349" width="250" height="20"/>
+                                <rect key="frame" x="46.666666666666657" y="364" width="300" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="G6Q-bq-TUh"/>
                                     <constraint firstAttribute="height" constant="20" id="T8r-a3-0Or"/>
+                                    <constraint firstAttribute="width" constant="300" id="tBQ-H5-2zi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="16"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="krX-YU-b15">
-                                <rect key="frame" x="71.666666666666686" y="308" width="250" height="35"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="krX-YU-b15">
+                                <rect key="frame" x="46.666666666666657" y="308" width="300" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="EP8-fn-q4G"/>
-                                    <constraint firstAttribute="width" constant="250" id="ZHo-lg-wqj"/>
+                                    <constraint firstAttribute="width" constant="300" id="D4r-iJ-Sli"/>
+                                    <constraint firstAttribute="height" constant="50" id="zqT-Zo-ikT"/>
                                 </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="onUsernameTextFieldEdited:" destination="DZF-mv-fLf" eventType="editingDidEnd" id="DYD-Ea-25t"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GA-N2-40Y">
-                                <rect key="frame" x="140" y="128" width="113" height="34"/>
-                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="30"/>
+                                <rect key="frame" x="121.66666666666669" y="127.99999999999999" width="150" height="44.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="coH-ia-6PQ">
-                                <rect key="frame" x="71.666666666666686" y="442" width="250" height="35"/>
+                                <rect key="frame" x="46.666666666666657" y="472" width="300" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="oCu-YR-Ph0"/>
-                                    <constraint firstAttribute="width" constant="250" id="y6d-Fp-xiL"/>
+                                    <constraint firstAttribute="height" constant="50" id="S9b-nv-302"/>
+                                    <constraint firstAttribute="width" constant="300" id="nOT-cm-Aoh"/>
                                 </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 <connections>
                                     <action selector="onPasswordTextFieldEdited:" destination="DZF-mv-fLf" eventType="editingDidEnd" id="PWN-cy-vFQ"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Password" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4q-UG-6Us">
-                                <rect key="frame" x="71.666666666666686" y="487" width="250" height="15.666666666666686"/>
+                                <rect key="frame" x="46.666666666666657" y="532" width="300" height="17.666666666666629"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="lVc-3D-0nX"/>
+                                    <constraint firstAttribute="width" constant="300" id="Syk-Rm-2bb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="16"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -228,34 +231,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4gb-OU-46j">
-                                <rect key="frame" x="71.666666666666686" y="403" width="250" height="35"/>
+                                <rect key="frame" x="46.666666666666657" y="403" width="300" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="G5c-pE-Yar"/>
-                                    <constraint firstAttribute="height" constant="35" id="dY5-vx-Q4l"/>
+                                    <constraint firstAttribute="height" constant="50" id="ENf-C0-KvJ"/>
+                                    <constraint firstAttribute="width" constant="300" id="cA2-yI-KTL"/>
                                 </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="onEmailTextFieldChanged:" destination="9MH-m6-za3" eventType="editingDidEnd" id="7oi-Ox-ZaJ"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2J-ub-lig">
-                                <rect key="frame" x="71.666666666666686" y="444" width="250" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2J-ub-lig">
+                                <rect key="frame" x="46.666666666666657" y="459" width="300" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Hzh-ON-tTB"/>
-                                    <constraint firstAttribute="width" constant="250" id="Scv-f6-v96"/>
+                                    <constraint firstAttribute="width" constant="300" id="OME-vw-efJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="16"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DF4-Q6-thG">
-                                <rect key="frame" x="71.666666666666686" y="663" width="250" height="35"/>
+                                <rect key="frame" x="46.666666666666657" y="648" width="300" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="JDB-hK-HRb"/>
-                                    <constraint firstAttribute="height" constant="35" id="uGU-Qi-aG3"/>
+                                    <constraint firstAttribute="width" constant="300" id="uVY-Jl-zfR"/>
+                                    <constraint firstAttribute="height" constant="50" id="wPR-ak-mI7"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Log In" cornerStyle="capsule">
@@ -263,6 +266,7 @@
                                         <color key="backgroundColor" red="1" green="0.69080444409999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Palatino-Bold" family="Palatino" pointSize="25"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -270,32 +274,32 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0d4-qW-bxh">
-                                <rect key="frame" x="93" y="128" width="207" height="34"/>
-                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="30"/>
+                                <rect key="frame" x="58.666666666666657" y="127.99999999999999" width="276" height="44.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="40"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UAi-S9-xbe">
-                                <rect key="frame" x="71.666666666666686" y="472" width="250" height="35"/>
+                                <rect key="frame" x="46.666666666666657" y="487" width="300" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="Zuo-R6-y96"/>
-                                    <constraint firstAttribute="width" constant="250" id="a9V-9O-81g"/>
+                                    <constraint firstAttribute="width" constant="300" id="7Ut-kU-cxC"/>
+                                    <constraint firstAttribute="height" constant="50" id="cDt-fr-hVe"/>
                                 </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 <connections>
                                     <action selector="onPasswordTextFieldChanged:" destination="9MH-m6-za3" eventType="editingDidEnd" id="XTD-HT-bjd"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMK-Yg-TCf">
-                                <rect key="frame" x="71.666666666666686" y="513" width="250" height="20"/>
+                                <rect key="frame" x="46.666666666666657" y="543" width="300" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="n6X-ot-Z8K"/>
+                                    <constraint firstAttribute="width" constant="300" id="0Uk-aa-Ei8"/>
                                     <constraint firstAttribute="height" constant="20" id="tUh-YO-Vy4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -392,7 +396,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tme-Ed-0eq"/>
+        <segue reference="JeD-59-FE0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
