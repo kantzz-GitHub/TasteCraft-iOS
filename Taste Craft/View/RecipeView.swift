@@ -42,6 +42,14 @@ struct RecipeView: View {
                         }
                     }
                     .padding()
+                    Button(action: {}) {
+                            Text("RUN RECIPE!")
+                              .padding()
+                              .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                            .stroke(.blue, lineWidth: 1)
+                                )
+                          }
                 }
             } else {
                 ProgressView()
