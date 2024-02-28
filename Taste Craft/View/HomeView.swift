@@ -16,37 +16,49 @@ struct HomeView: View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(viewModel.categories) { category in
-                        NavigationLink(destination: MealsView(category: category.name)) {
-                            CategoryView(name: category.name, imageURL: category.thumbnail)
-                                .padding(6)
+                    if viewModel.searchText.isEmpty {
+                        ForEach(viewModel.categories) { category in
+                            NavigationLink(destination: MealsView(category: category.name)) {
+                                CategoryView(name: category.name, imageURL: category.thumbnail)
+                                    .padding(6)
+                            }
+                        }.listRowSeparator(.hidden)
+                    } else {
+                        if let mealResponse = viewModel.meals {
+                            ForEach(mealResponse.meals) { meal in
+                                NavigationLink(destination: RecipeView(mealID: meal.id)) {
+                                    MealCardView(name: meal.name, imageURL: meal.thumbnail)
+                                }
+                            }.listRowSeparator(.hidden)
+                        } else {
+                            ContentUnavailableView(
+                                "No Results for \(viewModel.searchText)",
+                                systemImage: "carrot"
+                            )
+                            .listRowSeparator(.hidden)
                         }
-                    }.listRowSeparator(.hidden)
+                    }
                 }.listStyle(.plain)
             }
             .navigationTitle("Categories")
+            .searchable(text: $viewModel.searchText)
             .toolbar {
                 ToolbarItem {
                     Button("Logout") {
+                        defer { moveToLoginView() }
                         do {
                             let firebaseAuth = Auth.auth()
                             try firebaseAuth.signOut()
                             UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
                             UserDefaults.standard.synchronize()
-                            
-                            
-                            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                            let navController = mainStoryboard.instantiateViewController(withIdentifier: "NavController") as! UINavigationController
-                            UIApplication.shared.windows.first?.rootViewController = navController
-                            UIApplication.shared.windows.first?.makeKeyAndVisible()
-
                         } catch {
                             print("Failed with error: \(error.localizedDescription)")
                         }
                     }
                 }
             }
-        }.onAppear {
+        }
+        .onAppear {
             Task {
                 await viewModel.getListOfAvailableCategories()
             }
@@ -57,6 +69,19 @@ struct HomeView: View {
         Task {
             await viewModel.getListOfAvailableCategories()
         }
+    }
+    
+    private func searchMeal(for ingredient: String) {
+        Task {
+            await viewModel.getListOfMeals(for: ingredient)
+        }
+    }
+    
+    private func moveToLoginView() {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let navController = mainStoryboard.instantiateViewController(withIdentifier: "NavController") as! UINavigationController
+        UIApplication.shared.windows.first?.rootViewController = navController
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
 }
 
