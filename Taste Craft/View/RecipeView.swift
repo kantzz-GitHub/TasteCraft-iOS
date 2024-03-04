@@ -18,8 +18,6 @@ struct RecipeView: View {
             if let recipe = viewModel.selectedRecipe {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
-                        Text("Meal: \(recipe.strMeal ?? "")")
-                            .font(.title)
                         Text("Category: \(recipe.strCategory ?? "")")
                             .font(.headline)
                         
@@ -59,6 +57,8 @@ struct RecipeView: View {
                 await viewModel.getRecipeInstructions(for: mealID)
             }
         }
+        .navigationTitle(viewModel.navigationTitle)
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 
