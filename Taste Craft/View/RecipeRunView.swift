@@ -13,7 +13,8 @@ struct RecipeRunView: View {
     @State var recipeRunViewModel = RecipeRunViewModel()
     @State var count: Int = 0
     @State var hideNext: Bool = false
-    @State var hideGoBack: Bool = true
+    @State var hideBack: Bool = true
+    @State var hideDone: Bool = true
     
     var body: some View {
         VStack{
@@ -27,38 +28,71 @@ struct RecipeRunView: View {
             
             Spacer()
             
-            VStack{
-        
-                Button("Go Back") {
-                    if count == 0{
-                        self.hideGoBack = true
-                        self.hideNext = false
-                    } else {
-                        count -= 1
-                        self.hideGoBack = false
-                        self.hideNext = false
-                    }
-                }
-                .font(.title)
-                .disabled(hideGoBack)
-//                .padding()
+            HStack{
                 
-                Button("Next"){
-                    if(count < recipeRunViewModel.instructionsArray.count - 1){
+                Button {
+                        count -= 1
+                        self.hideBack = false
+                        self.hideNext = false
+                        self.hideDone = true
+                        
+                        if(count == 0){
+                            self.hideBack = true
+                            self.hideNext = false
+                        }
+                } label: {
+                    Text("BACK")
+                        .padding()
+                        .font(.title)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(.blue, lineWidth: 1)
+                        )
+                }
+                .disabled(hideBack)
+                
+                
+                Button {
                         count += 1
                         self.hideNext = false
-                        self.hideGoBack = false
-                    } else {
-                        self.hideNext = true
-                        self.hideGoBack = false
-                    }
+                        self.hideBack = false
+                        
+                        if(count == recipeRunViewModel.instructionsArray.count - 1){
+                            self.hideDone = false
+                            self.hideNext = true
+                        }
+                } label: {
+                    Text("NEXT")
+                        .padding()
+                        .font(.title)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(.blue, lineWidth: 1)
+                        )
                 }
-                .font(.title)
                 .disabled(hideNext)
-                .padding()
+                
+                
+                Button {
+                    if(count == recipeRunViewModel.instructionsArray.count - 1){
+                        self.hideDone = false
+                        self.presentationMode.wrappedValue.dismiss()
+                    } else {
+                        self.hideDone = true
+                    }
+                } label: {
+                    Text("DONE")
+                        .padding()
+                        .font(.title)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(.blue, lineWidth: 1)
+                        )
+                }
+                .disabled(hideDone)
             }
-            .padding()
-        }.onAppear{
+        }
+        .onAppear{
             Task{
                 
             }
