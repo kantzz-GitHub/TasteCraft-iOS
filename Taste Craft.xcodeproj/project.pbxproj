@@ -13,6 +13,8 @@
 		143089542B60A0350034CD0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143089522B60A0350034CD0F /* Main.storyboard */; };
 		143089562B60A0360034CD0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143089552B60A0360034CD0F /* Assets.xcassets */; };
 		143089592B60A0360034CD0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143089572B60A0360034CD0F /* LaunchScreen.storyboard */; };
+		143F24432B9530EC007B4B7F /* RecipeRunViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143F24422B9530EC007B4B7F /* RecipeRunViewModel.swift */; };
+		143F24452B953628007B4B7F /* RecipeRunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143F24442B953628007B4B7F /* RecipeRunView.swift */; };
 		145117B82B7A9D1A0095090E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145117B72B7A9D1A0095090E /* LoginVC.swift */; };
 		145117BA2B7A9DB10095090E /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145117B92B7A9DB10095090E /* CreateAccountVC.swift */; };
 		145117BC2B7AC1740095090E /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145117BB2B7AC1740095090E /* HomeScreenVC.swift */; };
@@ -54,6 +56,8 @@
 		143089552B60A0360034CD0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		143089582B60A0360034CD0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1430895A2B60A0360034CD0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		143F24422B9530EC007B4B7F /* RecipeRunViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRunViewModel.swift; sourceTree = "<group>"; };
+		143F24442B953628007B4B7F /* RecipeRunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRunView.swift; sourceTree = "<group>"; };
 		145117B72B7A9D1A0095090E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		145117B92B7A9DB10095090E /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		145117BB2B7AC1740095090E /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 			children = (
 				88F6307C2B7ABA09009A1F23 /* Components */,
 				88F630852B7AFFFB009A1F23 /* RecipeView.swift */,
+				143F24442B953628007B4B7F /* RecipeRunView.swift */,
 				88F6306F2B7AA04E009A1F23 /* HomeView.swift */,
 				88F6307A2B7AB9F1009A1F23 /* MealsView.swift */,
 				143089502B60A0350034CD0F /* StartVC.swift */,
@@ -178,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				88F630712B7AA079009A1F23 /* HomeViewModel.swift */,
+				143F24422B9530EC007B4B7F /* RecipeRunViewModel.swift */,
 				88F6307F2B7ABA57009A1F23 /* MealViewModel.swift */,
 				88F630872B7B004B009A1F23 /* RecipeViewModel.swift */,
 			);
@@ -312,12 +318,14 @@
 				8847B5262B79965400B28D79 /* API.swift in Sources */,
 				88F630772B7AA266009A1F23 /* Category.swift in Sources */,
 				88F630802B7ABA57009A1F23 /* MealViewModel.swift in Sources */,
+				143F24432B9530EC007B4B7F /* RecipeRunViewModel.swift in Sources */,
 				88F630862B7AFFFB009A1F23 /* RecipeView.swift in Sources */,
 				88F630702B7AA04E009A1F23 /* HomeView.swift in Sources */,
 				145117BA2B7A9DB10095090E /* CreateAccountVC.swift in Sources */,
 				88F6307B2B7AB9F1009A1F23 /* MealsView.swift in Sources */,
 				88F630822B7ABAB4009A1F23 /* MealsFetcher.swift in Sources */,
 				8847B5292B79968D00B28D79 /* NetworkRequestable.swift in Sources */,
+				143F24452B953628007B4B7F /* RecipeRunView.swift in Sources */,
 				1430894F2B60A0350034CD0F /* SceneDelegate.swift in Sources */,
 				88F6307E2B7ABA24009A1F23 /* CategoryView.swift in Sources */,
 				88F6308A2B7B007C009A1F23 /* RecipeFetcher.swift in Sources */,
