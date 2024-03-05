@@ -11,6 +11,7 @@ final class RecipeViewModel: ObservableObject {
     
     @Published var selectedRecipe: RecipeDetails? = nil
     
+    var navigationTitle: String = ""
     var recipeFetcher: RecipeFetching = RecipeFetcher()
     
     func getRecipeInstructions(for mealId: String) async {
@@ -22,6 +23,7 @@ final class RecipeViewModel: ObservableObject {
                 DispatchQueue.main.async { [weak self] in
                     guard let self = self else { return }
                     self.selectedRecipe = recipe
+                    navigationTitle = selectedRecipe?.strMeal ?? ""
                 }
             }
         } catch {
