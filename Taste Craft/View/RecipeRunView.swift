@@ -31,15 +31,15 @@ struct RecipeRunView: View {
             HStack{
                 
                 Button {
-                        count -= 1
-                        self.hideBack = false
+                    count -= 1
+                    self.hideBack = false
+                    self.hideNext = false
+                    self.hideDone = true
+                    
+                    if(count == 0){
+                        self.hideBack = true
                         self.hideNext = false
-                        self.hideDone = true
-                        
-                        if(count == 0){
-                            self.hideBack = true
-                            self.hideNext = false
-                        }
+                    }
                 } label: {
                     Text("BACK")
                         .padding()
@@ -53,14 +53,14 @@ struct RecipeRunView: View {
                 
                 
                 Button {
-                        count += 1
-                        self.hideNext = false
-                        self.hideBack = false
-                        
-                        if(count == recipeRunViewModel.instructionsArray.count - 1){
-                            self.hideDone = false
-                            self.hideNext = true
-                        }
+                    count += 1
+                    self.hideNext = false
+                    self.hideBack = false
+                    
+                    if(count == recipeRunViewModel.instructionsArray.count - 1){
+                        self.hideDone = false
+                        self.hideNext = true
+                    }
                 } label: {
                     Text("NEXT")
                         .padding()

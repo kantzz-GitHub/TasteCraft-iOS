@@ -42,9 +42,6 @@ struct RecipeView: View {
                                     .padding(.bottom, 4)
                                 Text(instructions)
                                     .font(.body)
-                                //                            let _ = print(instructions)
-                                //                            let myArray = instructions.components(separatedBy: "\r\n")
-                                
                             }
                         }
                         .padding()
