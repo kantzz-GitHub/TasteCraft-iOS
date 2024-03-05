@@ -73,6 +73,8 @@ struct RecipeView: View {
                 }
             }
         }
+        .navigationTitle(viewModel.navigationTitle)
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 

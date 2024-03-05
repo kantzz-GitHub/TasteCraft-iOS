@@ -9,6 +9,7 @@ import Foundation
 
 protocol CategoriesFetching {
     func loadFoodCategories() async throws -> Categories
+    func loadMeal(for ingredient: String) async throws -> Meals
 }
 
 struct CategoriesFetcher: CategoriesFetching {
@@ -29,8 +30,8 @@ struct CategoriesFetcher: CategoriesFetching {
         return try JSONDecoder().decode(Categories.self, from: data)
     }
     
-    func loadMeals(for category: String) async throws -> Meals {
-        let request = try MealDB.filteredCategory(category: category).createRequest()
+    func loadMeal(for ingredient: String) async throws -> Meals {
+        let request = try MealDB.search(ingredient: ingredient).createRequest()
         
         let (data, response) = try await session.data(for: request)
         
