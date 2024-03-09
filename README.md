@@ -16,8 +16,8 @@ and to instill them the love for cooking.
 - Vishweshwaran Ravi (1170091)
 
 ## Features
-— Users can create a new account and log in/out
-— Users can see the list of available recipes (Starter Recipes)
+- Users can create a new account and log in/out
+- Users can see the list of available recipes (Starter Recipes)
 - Users can search for various recipes using keywords(ingredient name)
 - Users can save the recipes they like to a separate "Saved" screen
 - Users can create a recipe of their own 
