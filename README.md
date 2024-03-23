@@ -30,7 +30,7 @@ and can receive the notification from the app when the timer is up
 new threshold is met
 
 
-#Demo
+# Demo
 
 Upon installing the App, Users are met with Login/SignUp page. From here on, they are able to log into their account or create one
 
