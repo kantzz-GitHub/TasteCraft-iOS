@@ -16,6 +16,9 @@ struct RecipeRunView: View {
     @State var hideBack: Bool = true
     @State var hideDone: Bool = true
     
+//    @State private var isClockButtonVisible = true
+    @State private var showingAlert = false
+    
     var body: some View {
         VStack{
             Spacer()
@@ -27,6 +30,18 @@ struct RecipeRunView: View {
             }
             
             Spacer()
+            
+            Button("Open Clock App") {
+                        showingAlert = true
+                    }
+                    .alert(isPresented: $showingAlert) {
+                        Alert(
+                            title: Text("Open Clock App"),
+                            message: Text("Please open the Clock app manually."),
+                            primaryButton: .default(Text("OK")),
+                            secondaryButton: .cancel()
+                        )
+                    }
             
             HStack{
                 
