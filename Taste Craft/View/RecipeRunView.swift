@@ -67,6 +67,7 @@ struct RecipeRunView: View {
                         self.hideBack = true
                         self.hideNext = false
                     }
+                    displayAlarmButton()
                 } label: {
                     Text("BACK")
                         .padding()
