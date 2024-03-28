@@ -16,8 +16,10 @@ struct RecipeRunView: View {
     @State var hideBack: Bool = true
     @State var hideDone: Bool = true
     
-//    @State private var isClockButtonVisible = true
-    @State private var showingAlert = false
+    @State private var isClockButtonVisible: Bool = false
+    @State private var showingAlert: Bool = false
+    
+    private let searchFor = ["minutes", "hour"]
     
     var body: some View {
         VStack{
@@ -30,18 +32,28 @@ struct RecipeRunView: View {
             }
             
             Spacer()
-            
-            Button("Open Clock App") {
+            VStack{
+                if isClockButtonVisible{
+                    Button("TIMER!") {
                         showingAlert = true
                     }
+                    .padding()
+                    .font(.title)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(.blue, lineWidth: 1)
+                    )
                     .alert(isPresented: $showingAlert) {
                         Alert(
-                            title: Text("Open Clock App"),
-                            message: Text("Please open the Clock app manually."),
+                            title: Text("Timer!"),
+                            message: Text("Open the Clock App and set the timer xD"),
                             primaryButton: .default(Text("OK")),
                             secondaryButton: .cancel()
                         )
                     }
+                }
+            }
+            
             
             HStack{
                 
@@ -76,6 +88,7 @@ struct RecipeRunView: View {
                         self.hideDone = false
                         self.hideNext = true
                     }
+                    displayAlarmButton()
                 } label: {
                     Text("NEXT")
                         .padding()
@@ -86,7 +99,6 @@ struct RecipeRunView: View {
                         )
                 }
                 .disabled(hideNext)
-                
                 
                 Button {
                     if(count == recipeRunViewModel.instructionsArray.count - 1){
@@ -110,6 +122,19 @@ struct RecipeRunView: View {
         .onAppear{
             Task{
                 
+            }
+        }
+    }
+    func displayAlarmButton(){
+        var currentInstruction = recipeRunViewModel.instructionsArray[count]
+        
+        isClockButtonVisible = false
+        
+        for i in searchFor{
+            if currentInstruction.contains(i){
+                isClockButtonVisible = true
+                print(i)
+                break
             }
         }
     }
