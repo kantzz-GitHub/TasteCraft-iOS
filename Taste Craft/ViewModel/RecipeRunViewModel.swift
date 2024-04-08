@@ -10,6 +10,9 @@ import Observation
 
 @Observable
 final class RecipeRunViewModel {
+    
+    var selectedMeal: Meal? = nil
     var instructionsArray: [String] = []
+    
 }
 

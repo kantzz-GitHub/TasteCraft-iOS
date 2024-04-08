@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Recipe: Decodable {
+struct Recipe: Codable {
     let meals: [[String: String?]]
 }
 
@@ -19,6 +19,7 @@ struct Ingredient: Identifiable {
 
 
 struct RecipeDetails {
+    
     let meal: [String: Any]
     
     var strMeal: String? {

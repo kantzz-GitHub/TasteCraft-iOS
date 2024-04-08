@@ -11,37 +11,49 @@ import FirebaseAuth
 struct HomeView: View {
     
     @StateObject var viewModel = HomeViewModel()
+    @State private var selectedTab = 0
     
     var body: some View {
         NavigationView {
-            VStack {
-                List {
-                    if viewModel.searchText.isEmpty {
-                        ForEach(viewModel.categories) { category in
-                            NavigationLink(destination: MealsView(category: category.name)) {
-                                CategoryView(name: category.name, imageURL: category.thumbnail)
-                                    .padding(6)
-                            }
-                        }.listRowSeparator(.hidden)
-                    } else {
-                        if let mealResponse = viewModel.meals {
-                            ForEach(mealResponse.meals) { meal in
-                                NavigationLink(destination: RecipeView(mealID: meal.id)) {
-                                    MealCardView(name: meal.name, imageURL: meal.thumbnail)
+            TabView(selection: $selectedTab) {
+                VStack {
+                    List {
+                        if viewModel.searchText.isEmpty {
+                            ForEach(viewModel.categories) { category in
+                                NavigationLink(destination: MealsView(category: category.name)) {
+                                    CategoryView(name: category.name, imageURL: category.thumbnail)
+                                        .padding(6)
                                 }
                             }.listRowSeparator(.hidden)
                         } else {
-                            ContentUnavailableView(
-                                "No Results for \(viewModel.searchText)",
-                                systemImage: "carrot"
-                            )
-                            .listRowSeparator(.hidden)
+                            if let mealResponse = viewModel.meals {
+                                ForEach(mealResponse.meals) { meal in
+                                    NavigationLink(destination: RecipeView(mealID: meal.id, meal: meal)) {
+                                        MealCardView(name: meal.name, imageURL: meal.thumbnail)
+                                    }
+                                }.listRowSeparator(.hidden)
+                            } else {
+                                ContentUnavailableView(
+                                    "No Results for \(viewModel.searchText)",
+                                    systemImage: "carrot"
+                                )
+                                .listRowSeparator(.hidden)
+                            }
                         }
+                    }.listStyle(.plain)
+                }
+                .tabItem {
+                    Label("Meals", systemImage: "takeoutbag.and.cup.and.straw")
+                }.tag(0)
+                
+                HistoryView()
+                    .tabItem {
+                        Label("History", systemImage: "gobackward")
                     }
-                }.listStyle(.plain)
+                    .tag(1)
             }
-            .navigationTitle("Categories")
             .searchable(text: $viewModel.searchText)
+            .navigationBarTitle(selectedTab == 1 ? "History" : "Categories")
             .toolbar {
                 ToolbarItem {
                     Button("Logout") {

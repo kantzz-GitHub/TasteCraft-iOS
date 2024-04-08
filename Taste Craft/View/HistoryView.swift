@@ -1,21 +1,15 @@
 //
-//  MealsView.swift
+//  HistoryView.swift
 //  Taste Craft
 //
-//  Created by Vishweshwaran on 2024-02-12.
+//  Created by Vishweshwaran on 2024-04-08.
 //
 
 import SwiftUI
 
-struct MealsView: View {
+struct HistoryView: View {
     
-    @StateObject var viewModel = MealViewModel()
-    
-    var category: String
-    
-    init(category: String) {
-        self.category = category
-    }
+    @State var viewModel = HistoryViewModel()
     
     var body: some View {
         VStack {
@@ -29,16 +23,12 @@ struct MealsView: View {
                 }.listStyle(.plain)
             }
         }
-        .navigationTitle(category)
-        .navigationBarTitleDisplayMode(.inline)
         .onAppear {
-            Task {
-                await viewModel.loadListOfMeals(for: category)
-            }
+            viewModel.loadMealsFromUserDefaults()
         }
     }
 }
 
 #Preview {
-    MealsView(category: "Beef")
+    HistoryView()
 }

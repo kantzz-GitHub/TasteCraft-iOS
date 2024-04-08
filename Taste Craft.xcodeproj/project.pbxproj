@@ -29,6 +29,8 @@
 		881E80DC2B793D0F008F65D5 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 881E80DB2B793D0F008F65D5 /* FirebaseInstallations */; };
 		881E80E82B793D0F008F65D5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 881E80E72B793D0F008F65D5 /* FirebaseStorage */; };
 		881E80EA2B793D0F008F65D5 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 881E80E92B793D0F008F65D5 /* FirebaseStorageCombine-Community */; };
+		882302EF2BC465F70064067A /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882302EE2BC465F70064067A /* HistoryView.swift */; };
+		882302F12BC46F9E0064067A /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882302F02BC46F9E0064067A /* HistoryViewModel.swift */; };
 		8847B5262B79965400B28D79 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847B5252B79965400B28D79 /* API.swift */; };
 		8847B5292B79968D00B28D79 /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847B5282B79968D00B28D79 /* NetworkRequestable.swift */; };
 		88F630702B7AA04E009A1F23 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6306F2B7AA04E009A1F23 /* HomeView.swift */; };
@@ -62,6 +64,8 @@
 		145117B92B7A9DB10095090E /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		145117BB2B7AC1740095090E /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
 		881E80B22B793C6C008F65D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		882302EE2BC465F70064067A /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		882302F02BC46F9E0064067A /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		8847B5252B79965400B28D79 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8847B5282B79968D00B28D79 /* NetworkRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
 		88727CE12B60AC7600F2DFCA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 				145117B72B7A9D1A0095090E /* LoginVC.swift */,
 				145117B92B7A9DB10095090E /* CreateAccountVC.swift */,
 				145117BB2B7AC1740095090E /* HomeScreenVC.swift */,
+				882302EE2BC465F70064067A /* HistoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				143F24422B9530EC007B4B7F /* RecipeRunViewModel.swift */,
 				88F6307F2B7ABA57009A1F23 /* MealViewModel.swift */,
 				88F630872B7B004B009A1F23 /* RecipeViewModel.swift */,
+				882302F02BC46F9E0064067A /* HistoryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -259,7 +265,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					143089482B60A0350034CD0F = {
 						CreatedOnToolsVersion = 15.2;
@@ -310,13 +316,14 @@
 				88F630842B7AFACA009A1F23 /* MealCardView.swift in Sources */,
 				88F630742B7AA0DF009A1F23 /* CategoriesFetcher.swift in Sources */,
 				88F630792B7AB8CA009A1F23 /* Meals.swift in Sources */,
-				143089512B60A0350034CD0F /* StartVC.swift in Sources */,
 				1430894D2B60A0350034CD0F /* AppDelegate.swift in Sources */,
 				88F630722B7AA079009A1F23 /* HomeViewModel.swift in Sources */,
 				145117B82B7A9D1A0095090E /* LoginVC.swift in Sources */,
+				882302EF2BC465F70064067A /* HistoryView.swift in Sources */,
 				88F630882B7B004B009A1F23 /* RecipeViewModel.swift in Sources */,
 				8847B5262B79965400B28D79 /* API.swift in Sources */,
 				88F630772B7AA266009A1F23 /* Category.swift in Sources */,
+				882302F12BC46F9E0064067A /* HistoryViewModel.swift in Sources */,
 				88F630802B7ABA57009A1F23 /* MealViewModel.swift in Sources */,
 				143F24432B9530EC007B4B7F /* RecipeRunViewModel.swift in Sources */,
 				88F630862B7AFFFB009A1F23 /* RecipeView.swift in Sources */,
@@ -559,8 +566,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.21.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 10.22.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

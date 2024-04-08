@@ -10,6 +10,7 @@ import Foundation
 final class RecipeViewModel: ObservableObject {
     
     @Published var selectedRecipe: RecipeDetails? = nil
+    @Published var recipe: Recipe? = nil
     
     var navigationTitle: String = ""
     var recipeFetcher: RecipeFetching = RecipeFetcher()
@@ -17,6 +18,7 @@ final class RecipeViewModel: ObservableObject {
     func getRecipeInstructions(for mealId: String) async {
         do {
             let response = try await recipeFetcher.loadRecipe(for: mealId)
+            self.recipe = response
             
             if let meal = response.meals.first {
                 let recipe = RecipeDetails(meal: meal as [String : Any])

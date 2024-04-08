@@ -10,7 +10,7 @@ import SwiftUI
 struct RecipeRunView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    @State var recipeRunViewModel = RecipeRunViewModel()
+    @State var recipeRunViewModel: RecipeRunViewModel
     @State var count: Int = 0
     @State var hideNext: Bool = false
     @State var hideBack: Bool = true
@@ -20,6 +20,14 @@ struct RecipeRunView: View {
     @State private var showingAlert: Bool = false
     
     private let searchFor = ["minutes", "hour"]
+    
+    init(recipeRunViewModel: RecipeRunViewModel) {
+        self._recipeRunViewModel = State(initialValue: recipeRunViewModel)
+        let viewModel = HistoryViewModel()
+        if let selectedMeal = recipeRunViewModel.selectedMeal {
+            viewModel.addItemsToUserDefaults(meal: selectedMeal)
+        }
+    }
     
     var body: some View {
         VStack{
@@ -142,5 +150,5 @@ struct RecipeRunView: View {
 }
 
 #Preview {
-    RecipeRunView()
+    RecipeRunView(recipeRunViewModel: .init())
 }

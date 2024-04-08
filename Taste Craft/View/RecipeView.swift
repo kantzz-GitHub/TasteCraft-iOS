@@ -13,6 +13,7 @@ struct RecipeView: View {
     @State var recipeRunViewModel = RecipeRunViewModel()
     
     var mealID: String
+    var meal: Meal
     
     var body: some View {
         NavigationView{
@@ -65,6 +66,7 @@ struct RecipeView: View {
                 Task {
                     await viewModel.getRecipeInstructions(for: mealID)
                     if let instructions = viewModel.selectedRecipe?.strInstructions {
+                        recipeRunViewModel.selectedMeal = meal
                         recipeRunViewModel.instructionsArray = instructions.components(separatedBy: "\r\n")
                     }
                 }
@@ -73,8 +75,4 @@ struct RecipeView: View {
         .navigationTitle(viewModel.navigationTitle)
         .navigationBarTitleDisplayMode(.large)
     }
-}
-
-#Preview {
-    RecipeView(mealID: "52772")
 }
