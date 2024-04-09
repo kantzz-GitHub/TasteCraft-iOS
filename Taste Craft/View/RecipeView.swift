@@ -11,6 +11,8 @@ struct RecipeView: View {
     
     @StateObject var viewModel = RecipeViewModel()
     @State var recipeRunViewModel = RecipeRunViewModel()
+    private let userDefaultsKey = "recipeRunCountKey"
+    @State private var recipeRunCount: Int = 0
     
     var mealID: String
     var meal: Meal
@@ -48,7 +50,11 @@ struct RecipeView: View {
                         .padding()
                         
                         VStack{
-                            NavigationLink(destination: RecipeRunView(recipeRunViewModel: recipeRunViewModel)){
+                            NavigationLink(destination: RecipeRunView(recipeRunViewModel: recipeRunViewModel).onAppear {
+                                recipeRunCount += 1
+                                print(recipeRunCount)
+                                UserDefaults.standard.set(recipeRunCount, forKey: userDefaultsKey)
+                            }){
                                 Text("RUN RECIPE!")
                                     .padding()
                                     .background(
@@ -64,6 +70,13 @@ struct RecipeView: View {
                 }
             }.onAppear {
                 Task {
+                    let retrievedValue = UserDefaults.standard.integer(forKey: userDefaultsKey)
+                    
+                    recipeRunCount = retrievedValue
+                    
+                    print(recipeRunCount)
+                                    
+                    
                     await viewModel.getRecipeInstructions(for: mealID)
                     if let instructions = viewModel.selectedRecipe?.strInstructions {
                         recipeRunViewModel.selectedMeal = meal
