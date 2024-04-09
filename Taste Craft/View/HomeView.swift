@@ -51,11 +51,17 @@ struct HomeView: View {
                         Label("History", systemImage: "gobackward")
                     }
                     .tag(1)
+                
+                SavedView()
+                    .tabItem {
+                        Label("Saved", systemImage: "bookmark")
+                    }
+                    .tag(2)
             }
             .searchable(text: $viewModel.searchText)
             .navigationBarTitle(selectedTab == 1 ? "History" : "Categories")
             .toolbar {
-                ToolbarItem {
+                ToolbarItem(placement: .topBarLeading) {
                     Button("Logout") {
                         defer { moveToLoginView() }
                         do {
@@ -66,6 +72,11 @@ struct HomeView: View {
                         } catch {
                             print("Failed with error: \(error.localizedDescription)")
                         }
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing){
+                    NavigationLink(destination: RankView()){
+                        Label("Rank", systemImage: "trophy")
                     }
                 }
             }

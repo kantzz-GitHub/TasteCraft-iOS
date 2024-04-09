@@ -34,7 +34,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
         
         loginBtn.startAnimatingPressActions()
-//        loginBtn.layer.cornerRadius = 15
+
     }
     
     @IBAction func onEmailTextFieldChanged(_ sender: UITextField) {
