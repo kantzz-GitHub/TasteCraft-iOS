@@ -72,6 +72,11 @@ struct RecipeView: View {
                             }, label: {
                                 Text("Save")
                             })
+                            .padding()
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(.blue, lineWidth: 1)
+                            )
                         }
                     }
                 } else {
