@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RecipeRunView: View {
+    
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     @State var recipeRunViewModel: RecipeRunViewModel
@@ -18,14 +19,12 @@ struct RecipeRunView: View {
     
     @State private var isClockButtonVisible: Bool = false
     @State private var showingAlert: Bool = false
-    
-    private let searchFor = ["minutes", "hour"]
-    
     @State private var countdownTimerText: String = ""
     @State private var duration: Int?
     @State private var unit: String?
-    
     @State private var timer: Timer?
+    
+    private let searchFor = ["minutes", "hour"]
     
     init(recipeRunViewModel: RecipeRunViewModel) {
         self._recipeRunViewModel = State(initialValue: recipeRunViewModel)
