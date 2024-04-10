@@ -63,6 +63,15 @@ struct RecipeView: View {
                                     )
                                 
                             }
+                            
+                            Button(action: {
+                                let savedViewModel = SavedViewModel()
+                                if let selectedMeal = recipeRunViewModel.selectedMeal {
+                                    savedViewModel.addItemsToUserDefaults(meal: selectedMeal)
+                                }
+                            }, label: {
+                                Text("Save")
+                            })
                         }
                     }
                 } else {
