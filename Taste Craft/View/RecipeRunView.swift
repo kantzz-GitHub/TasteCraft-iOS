@@ -12,7 +12,7 @@ struct RecipeRunView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     @State var recipeRunViewModel: RecipeRunViewModel
-        @State var count: Int = 0
+    @State var count: Int = 0
     @State var hideNext: Bool = false
     @State var hideBack: Bool = true
     @State var hideDone: Bool = true
